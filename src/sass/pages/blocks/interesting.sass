@@ -1,0 +1,70 @@
+.interesting
+  padding-bottom: 150px
+  +md
+    padding-bottom: 70px
+
+  &__content
+
+  &__img
+    transform: translateX(47%)
+
+  &__body
+
+  &__title
+    margin-bottom: 74px
+    +lg
+      margin-bottom: 40px
+    +md
+      margin-bottom: 30px
+
+.video
+  width: 100%
+  height: 675px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 15px
+  +xl
+    height: 515px
+  +lg
+    height: 415px
+  +md
+    height: 295px
+
+  &__preview-img
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: 15px
+    width: 100%
+    height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 15px
+
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 162px
+    height: 162px
+    border-radius: 50%
+    border: 1px solid $white
+    position: relative
+    +md
+      transform: scale(.7)
+
+    .icon--video-play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 33px
+      height: 38px
+      fill: $white

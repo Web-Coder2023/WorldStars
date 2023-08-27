@@ -1,0 +1,305 @@
+/*==============================Sport-Select=================================*/ 
+.sport-select .choices
+  font-family: $deff
+  width: fit-content
+  z-index: 10
+  +lg
+    width: 130px
+  +md
+    width: 110px
+  +xsm
+    width: 97px
+
+.sport-select .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+  overflow-y: auto
+
+.sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  white-space: nowrap
+
+.sport-select .choices.is-open .choices__inner
+  color: $white
+  border-color: transparent
+  &::after
+    opacity: 1
+    visibility: visible
+
+.sport-select .choices__inner
+  padding: 20px 66px
+  border: 1px solid #000
+  border-radius: 5px
+  position: relative
+  z-index: 10
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 0
+  background: transparent
+  +xl
+    padding: 11.5px 4.5px
+  +md
+    padding-top: 10px
+  +sm
+    padding-top: 6px
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    z-index: -1
+    transition: all 0.3s ease
+    background: $accent-grnt
+    opacity: 0
+    visibility: hidden
+
+.sport-select .choices__list--single
+  font-weight: 700
+  font-size: 18px
+  line-height: 100%
+  padding: 0
+
+.sport-select .choices__item.choices__item--choice.choices__item--selectable
+  font-weight: 400
+  font-size: 16px
+  padding: 10px
+
+.choices[data-type*=select-one]::after
+  content: ''
+  top: 45%
+  width: 8px
+  height: 8px
+  border: 1px solid $black
+  border-width: 0 0 1px 1px
+  z-index: 1
+  transform: rotate(-45deg)
+  transition: all 0.3s ease
+  +xsm
+    width: 6px
+    height: 6px
+    top: 47%
+
+.choices[data-type*=select-one].is-open::after
+  margin: 0
+  border-color: $white
+  transform: rotate(135deg)
+
+.choices__placeholder
+  opacity: 1
+
+.choices__list--dropdown .choices__placeholder
+  display: none
+
+.sport-select .choices__list--dropdown
+  max-height: 250px
+  overflow: auto
+
+.sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  +sm
+    padding: 7px
+
+.sport-select .choices__list--dropdown::-webkit-scrollbar
+  width: 0
+
+.sport-select .choices__list--dropdown.is-active
+  border: 1px solid $black
+  // border-radius: 14px
+  // border-top-width: 0
+  border-radius: 5px 5px 14px 14px
+/*==============================Sport-Select=================================*/ 
+
+/*==============================Sorting-Select=================================*/ 
+.sorting-select .choices
+  font-family: $deff
+  width: fit-content
+
+.sorting-select .choices__inner
+  padding: 14.5px 30px 14.5px 27px
+  color: $black
+  font-weight: 700
+  font-size: 20px
+  white-space: nowrap
+  +lg
+    padding: 10px 30px 10px 18px
+    font-size: 16px
+
+.sorting-select .choices__list--single
+  padding: 0
+
+.sorting-select .choices__inner
+  border: 1px solid #000
+  border-radius: 5px
+  position: relative
+  z-index: 1
+  background: transparent
+  // transition: all 0.3s ease
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    z-index: -1
+    transition: all 0.3s ease
+    background: $accent-grnt
+    opacity: 0
+    visibility: hidden
+
+.sorting-select .choices.is-open .choices__inner
+  color: $white
+  border-color: transparent
+  &::after
+    opacity: 1
+    visibility: visible
+
+.sorting-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  // font-family: $deff
+  // font-weight: 400
+  // font-size: 16px
+  // +lg
+    // font-size: 12px
+
+/*==============================Sorting-Select=================================*/ 
+
+/*==============================Style-Select=================================*/ 
+.style-select .choices
+  font-family: $deff
+  width: 338px
+  margin: 0 auto
+  z-index: 2
+  margin-bottom: 16px
+  +xxl
+    width: 315px
+  +xl
+    width: 260px
+  +lg
+    width: 270px
+  +md
+    width: 195px
+
+.style-select .choices__inner
+  border-radius: 14px
+  border: 1px solid $black
+  position: relative
+  z-index: 10
+  padding: 16.5px 24px 16.5px
+  +xl
+    padding: 12px 20px 12px
+  +md
+    padding: 8px 20px 8px 14px
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    background: $accent-grnt
+    transition: all 0.3s ease
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+
+.choices[data-type*=select-one]::after
+  z-index: 11
+
+.style-select .is-open .choices__inner
+  border-color: transparent
+  &::before
+    opacity: 1
+    visibility: visible
+
+  .choices__item--selectable
+    color: $white
+
+.style-select .choices__item--selectable
+  font-weight: 400
+  font-size: 18px
+  line-height: 100%
+  white-space: nowrap
+  +xl
+    font-size: 16px
+  +md
+    font-size: 13px
+
+.style-select .choices__list--single
+  padding: 0
+
+.style-select .choices__list--dropdown
+  top: calc( 100% - 30px )
+  padding-top: 30px
+  max-height: 250px
+  overflow: auto
+
+.style-select .choices__list--dropdown.is-active
+  border: 1px solid $black
+  border-top-width: 0
+  border-radius: 0 0 14px 14px
+
+.style-select .choices__item.choices__item--choice.choices__item--selectable
+  font-family: $deff
+  font-weight: 400
+  font-size: 16px
+  padding: 15px
+  +xl
+    font-size: 14px
+  +md
+    font-size: 12px
+
+  /*==============================Main-Select=================================*/ 
+
+.main-select
+  display: flex
+  .choices
+    margin-bottom: 0
+  .choices__inner
+    z-index: 1
+    padding: 8px 25px 8px 20px
+    background: transparent
+    border-radius: 10px
+    border: 1px solid #000
+    &::after
+      left: 0
+      top: 0
+      content: ''
+      background: $accent-grnt
+      width: 100%
+      height: 100%
+      position: absolute
+      display: none
+      z-index: -1
+    .choices__item
+      font-size: 14px
+      font-style: normal
+      font-weight: 700
+      line-height: 24px
+      padding-right: 2px
+
+  .choices::after
+    border-color: $black
+    right: 17.5px
+
+  .is-open
+    &::after
+      top: 50%
+      border-color: $white
+
+  .is-open
+    .choices__inner
+      position: relative
+      border-radius: 10px 10px 0px 0px
+      border: 1px solid transparent
+      .choices__item
+        color: $white
+      &::after
+        display: flex
+  .is-flipped
+    .choices__inner
+      border-radius: 0px 0px 10px 10px
+
+  /*==============================Profile-Select=================================*/ 
+  // Страница 1

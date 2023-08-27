@@ -1,0 +1,223 @@
+.meets
+  padding: 53px 0 138px
+  +lg
+    padding-bottom: 80px
+  +sm
+    padding-top: 35px
+    padding-bottom: 40px
+
+  &__title
+    font-weight: 400
+    font-size: 90px
+    line-height: 120%
+    text-align: center
+    color: $black
+    margin-bottom: 83px
+    +xxl
+      font-size: 75px
+      line-height: 110%
+      margin-bottom: 65px
+    +xl
+      font-size: 65px
+      line-height: 100%
+    +lg
+      font-size: 55px
+    +md
+      font-size: 40px
+      margin-bottom: 40px
+    +sm
+      font-size: 30px
+      margin-bottom: 30px
+    +xsm
+      font-size: 25px
+
+  &__nav
+    display: flex
+    justify-content: space-between
+    margin-bottom: 54px
+    +xsm
+      margin-bottom: 40px
+
+  &__nav-link
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 700
+    font-size: 20px
+    color: $black
+    border: 1px solid $black
+    border-radius: 5px
+    position: relative
+    z-index: 1
+    background: transparent
+    padding: 16px 103px
+    +xxl
+      padding: 12px 90px
+    +xl
+      padding: 8px 65px
+    +lg
+      padding: 8px 40px
+    +md
+      padding: 5px 20px
+      font-size: 17px
+    +sm
+      padding: 5px 10px
+      font-size: 15px
+    +xsm
+      font-size: 12px
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      background: $accent-grnt
+      border-radius: 5px
+      pointer-events: none
+      transition: all 0.3s ease
+      z-index: -1
+      opacity: 0
+      visibility: hidden
+    &:hover
+      +min_md
+        color: $white
+        border-color: transparent
+        &::after
+          opacity: 1
+          visibility: visible
+      +md
+        color: $black
+
+  &__tracker
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: center center
+    min-height: 254px
+    position: relative
+    margin-top: 111px
+    display: flex
+    justify-content: center
+    align-items: center
+    +md
+      min-height: 185px
+    +lg
+      margin-top: 65px
+    +sm
+      margin-top: 40px
+    +xsm
+      min-height: 140px
+
+.slider-meets
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: 0 0
+    position: relative
+    border-radius: 20px
+    min-height: 712px
+    max-height: 712px
+    +xxl
+      min-height: 650px
+    +xl
+      min-height: 580px
+    +lg
+      min-height: 460px
+    +md
+      min-height: 365px
+    +sm
+      min-height: 450px
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 84px
+      height: 283px
+      width: 100%
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0.00) 0%, rgba(0, 0, 0, 0.90) 67.37%)
+      +lg
+        bottom: 68px
+        height: 220px
+      +md
+        bottom: 62px
+        height: 150px
+
+  &__text
+    z-index: 1
+    text-align: center
+    max-width: 386px
+    margin: 0 auto
+    margin-bottom: 1rem
+    p
+      font-weight: 500
+      font-size: 24px
+      color: $white
+      margin-bottom: 0
+      +lg
+        font-size: 18px
+      +md
+        font-size: 14px
+
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+    border-radius: 0 0 20px 20px
+    background: $accent-grnt
+    padding: 30px 10px 28px
+    +lg
+      padding: 20px 10px 20px
+    span
+      font-weight: 700
+      font-size: 33px
+      color: $white
+      transition: all 0.3s ease
+      margin-right: 31px
+      +xxl
+        font-size: 25px
+      +lg
+        font-size: 18px
+      +md
+        font-size: 14px
+        margin-right: 10px
+    .icon--meets-slider-arrow
+      width: 55px
+      height: 17px
+      fill: $white
+      transition: all 0.3s ease
+      +md
+        width: 40px
+        height: 10px
+    &:hover
+      span
+        color: darken($white, 20%)
+      .icon--meets-slider-arrow
+        fill: darken($white, 20%)
+
+.swiper-wrapper
+  transition-timing-function: linear!important
+
+.meets__track
+
+.meets__track-item
+  height: 180px
+  border-radius: 15px
+  overflow: hidden
+  +md
+    height: 120px
+  +xsm
+    height: 95px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    pointer-events: none
+    user-select: none
+    border-radius: 15px

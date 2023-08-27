@@ -1,0 +1,191 @@
+.card-screen
+  padding-top: 224px
+  background-repeat: no-repeat
+  background-position: top
+  background-size: 100% 958px
+  position: relative
+  +xxl
+    padding-top: 125px
+    background-size: 100% 868px
+    // padding-top: 205px
+  +xl
+    background-size: 100% 658px
+    padding-top: 104px
+    // background-size: 100% 868px
+  +lg
+    padding-top: 104px
+    background-size: 100% 638px
+  +md
+    background-size: 100% 528px
+
+  &__content
+    position: relative
+
+  &__video
+    position: relative
+    z-index: 1
+
+  &__video-content
+    background: $accent-grnt
+    border-radius: 15px
+
+  &__video-header
+    position: relative
+    z-index: 1
+    padding: 90px 0 0 81px
+    +lg
+      padding: 48px 0 0 81px
+    +sm
+      padding: 48px 0 0 20px
+
+  &__video-preview
+    position: absolute
+    top: -1px
+    left: 0
+    right: 0
+    max-height: 648px
+    border-radius: 15px
+    overflow: hidden
+    +sm
+      height: 100%
+      max-height: 285px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 15px
+
+  &__video-category
+    p
+      font-weight: 400
+      font-size: 30px
+      line-height: 130%
+      color: $white
+      +xxl
+        font-size: 30px
+      +lg
+        font-size: 20px
+      +md
+        margin: 0
+        font-size: 13px
+
+  &__video-name
+    p
+      font-weight: 400
+      font-size: 85px
+      line-height: 130%
+      color: $white
+      +xxl
+        font-size: 70px
+      +lg
+        font-size: 47px
+      +md
+        font-size: 26px
+
+  &__video-link
+    position: absolute
+    top: 35%
+    left: 50%
+    transform: translateX(-50%)
+    +lg
+      top: 23%
+      left: 38%
+      transform: scale(.7) translateX(-0%)
+    +md
+      top: 14%
+      left: 35%
+      transform: scale(.5) translateX(0)
+    +sm
+      left: 25%
+
+  &__video-body
+    display: flex
+    justify-content: space-between
+    padding: 425px 86px 50px 60px
+    +xxl
+      padding: 386px 86px 50px 60px
+    +xl
+      padding: 295px 86px 50px 60px
+    +lg
+      padding: 259px 40px 50px 40px
+      align-items: center
+    +md
+      padding: 185px 40px 35px 40px
+      flex-direction: column
+    +sm
+      padding: 208px 20px 50px 20px
+
+  &__video-descr
+    max-width: 466px
+    +lg
+      max-width: 290px
+    +md
+      margin-bottom: 20px
+
+    p
+      font-weight: 400
+      font-size: 24px
+      line-height: 120%
+      color: $white
+      margin-bottom: 0
+      +lg
+        margin-right: 10px
+        font-size: 15px
+      +md
+        text-align: center
+  .white-btn
+    +lg
+      font-size: 16px
+      padding: 22px 37px
+    +md
+      padding: 15px 25px
+
+  &__video-footer
+    display: flex
+    justify-content: space-between
+    margin-top: 33px
+    gap: 10px
+
+  &__video-author
+    span
+      font-weight: 700
+      font-size: 20px
+      color: $grey
+      +md
+        font-size: 14px
+      +sm
+        font-size: 10px
+
+  &__video-view
+    span
+      font-weight: 700
+      font-size: 20px
+      color: $grey
+      +md
+        font-size: 14px
+      +sm
+        font-size: 10px
+
+  &__img
+    img:nth-child(1)
+      position: absolute
+      bottom: -20px
+      left: 0
+      +xl
+        bottom: -00px
+      +md
+        bottom: 26px
+        max-width: 420px
+      +sm
+        display: none
+    img:nth-child(2)
+      position: absolute
+      bottom: -20px
+      right: 0
+      +xl
+        bottom: 10px
+      +md
+        bottom: 15px
+        max-width: 294px
+      +sm
+        display: none
